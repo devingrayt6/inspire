@@ -6,7 +6,10 @@ import store from "../store.js";
 
 //TODO Complete rendering data to the screen
 function drawWeather() {
-  console.log("THE WEATHER MAN SAYS:", store.State.weather);
+  let weather = store.State.weather;
+  let fahrenheit = (weather.kelvin - 273.15) * (9 / 5) + 32;
+  weather.temp = fahrenheit.toFixed(0);
+  document.getElementById('weather').innerHTML = weather.Template;
 }
 export default class WeatherController {
   constructor() {

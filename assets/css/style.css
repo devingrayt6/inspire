@@ -2,3 +2,10 @@
   color: red;
   font-size: 2em;
 }
+.weather{
+  display: flex;
+  justify-content: flex-end;
+}
+.weather-shadow{
+  background-color: rgba(0, 0, 0, 0.068);
+}
