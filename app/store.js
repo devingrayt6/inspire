@@ -6,6 +6,7 @@ let _state = {
   /**@type {any[]}*/
   todos: [], //TODO change 'any' to your todo model
   imgUrl: '',
+  quote: null,
 };
 
 /** Collection of listeners to be called based on keyed state changes
@@ -13,7 +14,8 @@ let _state = {
  */
 let _listeners = {
   weather: [],
-  imgUrl: []
+  imgUrl: [],
+  quote: []
 };
 
 /**
