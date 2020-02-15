@@ -49,7 +49,7 @@ class TodoService {
   removeTodoAsync(todoId) {    
     //TODO Work through this one on your own
     //		what is the request type
-    //		once the response comes back, what do you need to insure happens?
+    //		once the response comes back what do you need to insure happens?
     todoApi.delete(todoId)
       .then(res=>{
         let newTodos = store.State.todos.filter(t => t._id != todoId)
