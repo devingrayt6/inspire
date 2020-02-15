@@ -10,8 +10,18 @@ function _drawTodos() {
   todos.forEach(t => {
     template += t.Template;
   })
-
   todoElem.innerHTML = template;
+
+  todos.forEach(t=>{
+    let taskStatus = document.getElementById(t._id)
+    if(t.completed == true) {
+      taskStatus.disabled = true;
+      taskStatus.checked = true;
+     }else{ 
+        taskStatus.disabled = false;
+        taskStatus.checked = false;
+     }
+  })
 }
 
 export default class TodoController {
@@ -29,6 +39,7 @@ export default class TodoController {
       description: form.taskTodo.value
     };
     TodoService.addTodoAsync(todo);
+    form.taskTodo.value = ''
   }
 
   //NOTE This method will pass an Id to your service for the TODO that will need to be toggled

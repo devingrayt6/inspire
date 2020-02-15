@@ -39,20 +39,18 @@
 			</div>
 			<div class="col-12 col-md-4">
 				<div>
-					A Todo List
 					<div id="todo-error"></div>
-					<form onsubmit="app.todoController.addTodo(event)">
-						<input type="text" name="taskTodo"><button type="submit" class="btn btn-info">Add</button>
-					</form>
-					<div id="todos"></div>
+					<div class="todo-elem bg-dark p-3">
+						A Todo List
+						<form onsubmit="app.todoController.addTodo(event)">
+							<input type="text" name="taskTodo"> <button type="submit" class="btn btn-info">Add</button>
+						</form>
+						<div id="todos"></div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</main>
-
-
-
-
 
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
