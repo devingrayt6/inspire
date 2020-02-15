@@ -13,6 +13,7 @@ let _state = {
  * @type {{[x:string]: function[]}}
  */
 let _listeners = {
+  todos: [],
   weather: [],
   imgUrl: [],
   quote: []
