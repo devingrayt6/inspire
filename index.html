@@ -40,12 +40,17 @@
 			<div class="col-12 col-md-4">
 				<div>
 					<div id="todo-error"></div>
-					<div class="todo-elem bg-dark p-3">
-						A Todo List
+					<div class="todo-elem bg-dark p-3 row">
+						<div class="col-12 col-md-6">
+							A Todo List
 						<form onsubmit="app.todoController.addTodo(event)">
 							<input type="text" name="taskTodo"> <button type="submit" class="btn btn-info">Add</button>
 						</form>
 						<div id="todos"></div>
+						</div>
+						<div class="col-12 col-md-6">
+							<h4 id="todo-count"></h4>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -21,7 +21,9 @@ function _drawTodos() {
         taskStatus.disabled = false;
         taskStatus.checked = false;
      }
-  })
+  });
+  let todosLeft = todos.filter(t=>t.completed == false);
+  document.getElementById('todo-count').innerHTML = todosLeft.length;
 }
 
 export default class TodoController {
