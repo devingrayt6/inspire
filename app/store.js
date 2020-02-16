@@ -7,6 +7,10 @@ let _state = {
   todos: [], //TODO change 'any' to your todo model
   imgUrl: '',
   quote: null,
+  time: '',
+  militaryTime: false,
+  user: 'devin',
+  userInput: false,
 };
 
 /** Collection of listeners to be called based on keyed state changes
@@ -16,7 +20,11 @@ let _listeners = {
   todos: [],
   weather: [],
   imgUrl: [],
-  quote: []
+  quote: [],
+  time: [],
+  militaryTime: [],
+  user: [],
+  userInput: [],
 };
 
 /**

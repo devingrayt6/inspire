@@ -1,9 +1,10 @@
 import store from "../store.js";
 import Task from '../models/task.js';
 
+let _user = store.State.user;
 // @ts-ignore
 const todoApi = axios.create({
-  baseURL: "https://bcw-sandbox.herokuapp.com/api/devin/todos/",
+  baseURL: `https://bcw-sandbox.herokuapp.com/api/${_user}/todos/`,
   timeout: 8000
 });
 
@@ -14,6 +15,7 @@ class TodoService {
       .then(res=>{
         let todos = res.data.data.map(t=>new Task(t));
         store.commit('todos', todos);
+        console.log(res)
       })
       .catch(error=>console.error(error))
     //TODO Handle this response from the server

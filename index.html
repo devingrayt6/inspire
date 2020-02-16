@@ -25,31 +25,36 @@
 
 	<main class="container-fluid text-white">
 
+		<div>
+			<div class="userToggle" onclick="app.userController.toggleUserInput()" ><h3>Not You?</h3></div>
+			<div class="user-change" id="user-input"></div>
+		</div>
+
 		<div class="row text-center clock" id="clock">
 			<div class="col-12">
-				<h1>3:00</h1>
+				<div class="clock" id="clock"></div>
+				<h1 id="user-name"></h1>
 			</div>
 		</div>
-		<div class="row">
+		
+
+		<div class="row bottom-row">
 			<div class="col-12 col-md-4" id="image-details">
 
 			</div>
-			<div class="col-12 col-md-4" id="quote">
+			<div class="col-12 col-md-4 quote" id="quote">
 
 			</div>
-			<div class="col-12 col-md-4">
+			<div class="col-12 col-md-4 todo-div">
 				<div>
 					<div id="todo-error"></div>
-					<div class="todo-elem bg-dark p-3 row">
-						<div class="col-12 col-md-6">
-							A Todo List
+					<div class="todo-elem bg-dark p-3">
+						<div class="m-2">
+							<span>Tasks to do: <p id="todo-count"></p></span>
 						<form onsubmit="app.todoController.addTodo(event)">
 							<input type="text" name="taskTodo"> <button type="submit" class="btn btn-info">Add</button>
 						</form>
 						<div id="todos"></div>
-						</div>
-						<div class="col-12 col-md-6">
-							<h4 id="todo-count"></h4>
 						</div>
 					</div>
 				</div>

@@ -1,6 +1,6 @@
 html {
   min-height:100%;
-  box-shadow:inset 0 0 0 2000px rgba(54, 54, 54, 0.3);
+  box-shadow:inset 0 0 0 2000px rgba(54, 54, 54, 0.466);
 }
 body{
   background-size: cover;
@@ -14,13 +14,47 @@ body{
   display: flex;
   justify-content: flex-end;
 }
-.weather-shadow{
-  background-color: rgba(0, 0, 0, 0.068);
-}
 .clock{
   margin-top: 10rem;
+  cursor: pointer;
 }
-.clock div h1{
+.current-time{
   font-size: 7rem;
+}
+.time-div{
   margin-bottom: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.time-div :hover{
+  color: rgb(2, 2, 2) !important;
+}
+.todo-elem{
+  position: absolute;
+  width: 20rem;
+  margin-left: 16rem;
+  margin-right: auto;
+  margin-top: -14rem;;
+}
+.todo-elem span{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.one-task{
+  display: flex;
+  flex-direction: row;
+}
+.remove-task{
+  padding-left: 1.25px;
+  padding-right: 1.25px;
+  padding-top: 0.25px;
+  padding-bottom: 0.25px;
+  margin-left: 0.25rem;
+}
+.bottom-row{
+  margin-top: 14rem;
+}
+.userToggle{
+  cursor: pointer;
 }
