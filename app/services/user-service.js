@@ -9,10 +9,6 @@ class UserService {
         let inputStatus = !store.State.userInput;
         store.commit('userInput', inputStatus)
     }
-
-    changeUser(){
-        
-    }
 }
 
 

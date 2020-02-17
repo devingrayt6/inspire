@@ -8,10 +8,16 @@ function _drawClock(){
     `;
 }
 
+function _drawUserName(){
+    document.getElementById('user-name').innerText = store.State.user;
+}
+
 export default class ClockController{
     constructor(){
         store.subscribe("time", _drawClock);
+        store.subscribe("user", _drawUserName);
         setInterval(ClockService.getTime, 1000)
+        _drawUserName();
     }
     
     toggleTimeFormat(){

@@ -1,21 +1,24 @@
 import store from "../store.js";
 import Task from '../models/task.js';
 
-let _user = store.State.user;
 // @ts-ignore
 const todoApi = axios.create({
-  baseURL: `https://bcw-sandbox.herokuapp.com/api/${_user}/todos/`,
+  baseURL: `https://bcw-sandbox.herokuapp.com/api/${store.State.user}/todos/`,
   timeout: 8000
 });
 
 class TodoService {
   getTodos() {
+    todoApi.defaults.baseURL = `https://bcw-sandbox.herokuapp.com/api/${store.State.user}/todos/`;
+
     console.log("Getting the Todo List");
     todoApi.get()
       .then(res=>{
         let todos = res.data.data.map(t=>new Task(t));
         store.commit('todos', todos);
         console.log(res)
+        console.log(store.State.user);
+        console.log(todoApi.defaults.baseURL)
       })
       .catch(error=>console.error(error))
     //TODO Handle this response from the server
@@ -48,7 +51,7 @@ class TodoService {
     //TODO do you care about this data? or should you go get something else?
   }
 
-  removeTodoAsync(todoId) {    
+  removeTodoAsync(todoId) {  
     //TODO Work through this one on your own
     //		what is the request type
     //		once the response comes back what do you need to insure happens?

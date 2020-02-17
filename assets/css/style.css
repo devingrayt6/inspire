@@ -15,7 +15,7 @@ body{
   justify-content: flex-end;
 }
 .clock{
-  margin-top: 10rem;
+  margin-top: 5rem;
   cursor: pointer;
 }
 .current-time{
@@ -34,7 +34,7 @@ body{
   width: 20rem;
   margin-left: 16rem;
   margin-right: auto;
-  margin-top: -14rem;;
+  margin-top: -14rem;
 }
 .todo-elem span{
   display: flex;
@@ -53,8 +53,15 @@ body{
   margin-left: 0.25rem;
 }
 .bottom-row{
-  margin-top: 14rem;
+  margin-top: 10rem;
 }
 .userToggle{
   cursor: pointer;
+}
+.quote{
+  margin-bottom: 5rem;
+}
+.scroll{
+  overflow-y: auto;
+  max-height: 15rem;
 }

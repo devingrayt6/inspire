@@ -30,13 +30,10 @@
 			<div class="user-change" id="user-input"></div>
 		</div>
 
-		<div class="row text-center clock" id="clock">
-			<div class="col-12">
-				<div class="clock" id="clock"></div>
-				<h1 id="user-name"></h1>
-			</div>
+		<div class="text-center">
+			<div class="clock" id="clock"></div>
+			<h1>Hello <span id="user-name"></span></h1>
 		</div>
-		
 
 		<div class="row bottom-row">
 			<div class="col-12 col-md-4" id="image-details">
@@ -54,7 +51,7 @@
 						<form onsubmit="app.todoController.addTodo(event)">
 							<input type="text" name="taskTodo"> <button type="submit" class="btn btn-info">Add</button>
 						</form>
-						<div id="todos"></div>
+						<div class="scroll" id="todos"></div>
 						</div>
 					</div>
 				</div>
